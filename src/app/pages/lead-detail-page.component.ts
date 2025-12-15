@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, inject, signal } from '@angular/core';
 import { DatePipe, UpperCasePipe } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -178,13 +178,15 @@ export class LeadDetailPageComponent {
   readonly pendingCallStartedAt = signal('');
 
   constructor() {
-    const request = this.callFlow.dispositionRequest();
-    const id = this.leadId().get('id');
-    if (request && id && request.leadId === id) {
-      this.pendingDialer.set(request.dialerUsed);
-      this.pendingCallStartedAt.set(request.callStartedAt);
-      this.showDispositionModal.set(true);
-    }
+    effect(() => {
+      const request = this.callFlow.dispositionRequest();
+      const id = this.leadId().get('id');
+      if (request && id && request.leadId === id) {
+        this.pendingDialer.set(request.dialerUsed);
+        this.pendingCallStartedAt.set(request.callStartedAt);
+        this.showDispositionModal.set(true);
+      }
+    });
   }
 
   protected goBack(): void {

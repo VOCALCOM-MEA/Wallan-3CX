@@ -11,7 +11,7 @@ import { StorageService } from '../services/storage.service';
       <div class="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <h1 class="text-lg font-semibold text-slate-900">Enter workspace</h1>
         <p class="mt-1 text-sm text-slate-500">
-          This is a demo login. Your username is stored only in your browser.
+          This is a demo login.
         </p>
 
         <form class="mt-6 space-y-4" [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -28,7 +28,7 @@ import { StorageService } from '../services/storage.service';
             aria-describedby="username-help"
           />
           <p id="username-help" class="text-xs text-slate-500">
-            Use any name you like. It will be remembered for this browser only.
+            Use any name you like.
           </p>
 
           <button
