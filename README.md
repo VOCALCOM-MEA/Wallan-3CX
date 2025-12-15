@@ -1,59 +1,35 @@
-# 3cxPoc
+# 3CX Lead Dialer POC
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+Minimal Angular POC for a lead dialer workflow using static data, Tailwind CSS, and `localStorage` only.
 
-## Development server
+- Fake login stores the username in `localStorage`.
+- Leads are loaded from `src/assets/leads.json`.
+- Call flow: Lead details → choose dialer (System / 3CX) → return → disposition modal.
+- Dispositions and pending calls are stored in `localStorage`.
 
-To start a local development server, run:
+## Run the app
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+From the `3cx-poc` directory:
 
 ```bash
-ng generate component component-name
+npm install
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Then open `http://localhost:4200/` in your browser.
 
-```bash
-ng generate --help
-```
+## Key pages
 
-## Building
+- `/login` – simple username input; persists to `localStorage` and redirects to `/leads`.
+- `/leads` – searchable list of leads (mobile cards + desktop table), sorted by `createdTime` desc, with status badges.
+- `/leads/:id` – lead details, Call button, and last disposition summary.
 
-To build the project run:
+## Call & disposition flow (POC)
 
-```bash
-ng build
-```
+1. From `/leads/:id`, click **Call lead**.
+2. Choose **System dialer** (`tel:`) or **3CX dialer** (`tcxcallto://{number}`).
+3. The app stores a pending call (lead id, dialer, start time) in `localStorage` and navigates to the dialer URL.
+4. When you return to the tab (focus/visibility) after ≥ 5 seconds, the disposition modal auto-opens.
+5. Save a status and optional notes; the latest record is stored under the `poc_dispositions` key.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+All state is local to the browser; there is no backend or real authentication.

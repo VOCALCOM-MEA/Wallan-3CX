@@ -1,0 +1,94 @@
+[
+  {
+    "zohoRecordId": "zcrm_6174926000024740120",
+    "city": "Buraidah",
+    "lastName": "البلوي",
+    "createdTime": "1/1/2025 4:15",
+    "mobile": "+966555465718",
+    "modelMap": "ACCENT",
+    "salesman": "Sales Exec X"
+  },
+  {
+    "zohoRecordId": "zcrm_6174926000024744281",
+    "city": "Al-Rass",
+    "lastName": "الحربي",
+    "createdTime": "1/1/2025 11:45",
+    "mobile": "+966504348986",
+    "modelMap": "i10",
+    "salesman": "Sales Exec A"
+  },
+  {
+    "zohoRecordId": "zcrm_6174926000024662024",
+    "city": "",
+    "lastName": "العتيبي",
+    "createdTime": "1/1/2025 11:50",
+    "mobile": "+966533339448",
+    "modelMap": "ACCENT",
+    "salesman": "Sales Exec Y"
+  },
+  {
+    "zohoRecordId": "zcrm_6174926000024662059",
+    "city": "",
+    "lastName": "القحطاني",
+    "createdTime": "1/1/2025 11:53",
+    "mobile": "+966534963205",
+    "modelMap": "ACCENT",
+    "salesman": "Sales Exec X"
+  },
+  {
+    "zohoRecordId": "zcrm_6174926000024662094",
+    "city": "",
+    "lastName": "المطيري",
+    "createdTime": "1/1/2025 11:57",
+    "mobile": "+966502022117",
+    "modelMap": "ACCENT",
+    "salesman": "Sales Exec  Y"
+  },
+  {
+    "zohoRecordId": "zcrm_6174926000024755192",
+    "city": "Jeddah",
+    "lastName": "الشهراني",
+    "createdTime": "1/1/2025 13:15",
+    "mobile": "+966553731202",
+    "modelMap": "TUCSON",
+    "salesman": "Sales Exec A"
+  },
+  {
+    "zohoRecordId": "zcrm_6174926000024760016",
+    "city": "Riyadh",
+    "lastName": "ابراهيم عبدالرحمن إبراهيم الدوسريال فياض",
+    "createdTime": "1/1/2025 13:41",
+    "mobile": "+966553737972",
+    "modelMap": "ELANTRA",
+    "salesman": "Sales Exec X"
+  },
+  {
+    "zohoRecordId": "zcrm_6174926000024760005",
+    "city": "Riyadh",
+    "lastName": "عيدالشدادي",
+    "createdTime": "1/1/2025 13:41",
+    "mobile": "+966555234306",
+    "modelMap": "i10",
+    "salesman": "Sales Exec C"
+  },
+  {
+    "zohoRecordId": "zcrm_6174926000024629998",
+    "city": "Riyadh",
+    "lastName": "سلطانمحمد",
+    "createdTime": "1/1/2025 13:41",
+    "mobile": "+966581283332",
+    "modelMap": "Santa Fe",
+    "salesman": "Sales Exec Y"
+  },
+  {
+    "zohoRecordId": "zcrm_6174926000024629983",
+    "city": "Riyadh",
+    "lastName": "محمدالحقباني",
+    "createdTime": "1/1/2025 13:41",
+    "mobile": "+966559293757",
+    "modelMap": "SONATA",
+    "salesman": "Sales Exec X"
+  }
+]
+
+
