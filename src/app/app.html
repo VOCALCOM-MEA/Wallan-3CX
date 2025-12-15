@@ -1,7 +1,10 @@
 <div class="min-h-screen bg-slate-100 text-slate-900">
   <header class="border-b border-slate-200 bg-white">
-    <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
-      <div class="flex items-center gap-3">
+    <div
+      class="mx-auto grid max-w-5xl grid-cols-[auto,1fr,auto] items-center gap-4 px-4 py-3"
+    >
+      <!-- Left: Wallan logo -->
+      <div class="flex items-center">
         <img
           ngSrc="assets/wallan-logo.png"
           alt="Wallan Group"
@@ -10,17 +13,20 @@
           class="h-10 w-10 rounded-full border border-slate-200 bg-white object-contain"
           priority
         />
-        <div class="flex flex-col">
-          <span class="text-xs font-semibold uppercase tracking-wide text-indigo-600">
-            3CX POC
-          </span>
-          <span class="text-base font-semibold text-slate-900">
-            {{ title() }}
-          </span>
-        </div>
       </div>
 
-      <div class="flex items-center gap-4">
+      <!-- Center: App title -->
+      <div class="flex flex-col items-center text-center">
+        <span class="text-xs font-semibold uppercase tracking-wide text-indigo-600">
+          3CX POC
+        </span>
+        <span class="text-base font-semibold text-slate-900">
+          {{ title() }}
+        </span>
+      </div>
+
+      <!-- Right: Vocalcom logo + user info -->
+      <div class="flex items-center justify-end gap-4">
         <img
           ngSrc="assets/vocalcom-logo.svg"
           alt="Vocalcom"
