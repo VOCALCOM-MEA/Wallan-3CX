@@ -2,23 +2,14 @@
   <header class="border-b border-slate-200 bg-white">
     <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
       <div class="flex items-center gap-3">
-        <div class="flex items-center gap-2">
-          <img
-            ngSrc="assets/wallan-logo.png"
-            alt="Wallan Group"
-            width="40"
-            height="40"
-            class="h-10 w-10 rounded-full border border-slate-200 bg-white object-contain"
-            priority
-          />
-          <img
-            ngSrc="assets/vocalcom-logo.svg"
-            alt="Vocalcom"
-            width="80"
-            height="40"
-            class="h-8 w-auto object-contain"
-          />
-        </div>
+        <img
+          ngSrc="assets/wallan-logo.png"
+          alt="Wallan Group"
+          width="40"
+          height="40"
+          class="h-10 w-10 rounded-full border border-slate-200 bg-white object-contain"
+          priority
+        />
         <div class="flex flex-col">
           <span class="text-xs font-semibold uppercase tracking-wide text-indigo-600">
             3CX POC
@@ -29,21 +20,31 @@
         </div>
       </div>
 
-      @if (isLoggedIn()) {
-        <div class="flex items-center gap-3">
-          <div class="flex flex-col items-end text-right">
-            <span class="text-xs text-slate-500">Logged in as</span>
-            <span class="text-sm font-medium text-slate-900">{{ username() }}</span>
+      <div class="flex items-center gap-4">
+        <img
+          ngSrc="assets/vocalcom-logo.svg"
+          alt="Vocalcom"
+          width="80"
+          height="40"
+          class="h-8 w-auto object-contain"
+        />
+
+        @if (isLoggedIn()) {
+          <div class="flex items-center gap-3">
+            <div class="flex flex-col items-end text-right">
+              <span class="text-xs text-slate-500">Logged in as</span>
+              <span class="text-sm font-medium text-slate-900">{{ username() }}</span>
+            </div>
+            <button
+              type="button"
+              class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-700 shadow-sm hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+              (click)="logout()"
+            >
+              Logout
+            </button>
           </div>
-          <button
-            type="button"
-            class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-700 shadow-sm hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
-            (click)="logout()"
-          >
-            Logout
-          </button>
-        </div>
-      }
+        }
+      </div>
     </div>
   </header>
 
